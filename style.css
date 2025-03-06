@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+label {
+    margin-right: 10px;
+}
+
+input {
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#stadium {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.group {
+    display: grid;
+    gap: 5px;
+    margin: 0 20px;
+}
+
+#leftGroup, #rightGroup {
+    grid-template-columns: repeat(5, 30px);
+    grid-template-rows: repeat(14, 30px);
+}
+
+#centerGroup {
+    grid-template-columns: repeat(14, 30px);
+    grid-template-rows: repeat(14, 30px);
+}
+
+.group div {
+    width: 30px;
+    height: 30px;
+    background-color: green;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+#summary {
+    margin-top: 20px;
+}

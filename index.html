@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulation de Remplissage de Gradins</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Simulation de Remplissage de Gradins</h1>
+
+    <!-- Sélection de la jauge -->
+    <div id="initial-question">
+        <p>La jauge est-elle tendue ?</p>
+        <div id="jauge-buttons">
+            <button onclick="setJaugeTendue(true)">Oui, jauge tendue</button>
+            <button onclick="setJaugeTendue(false)">Non, jauge non tendue</button>
+        </div>
+    </div>
+
+    <!-- Application principale (masquée au départ) -->
+    <div id="app" style="display: none;">
+        <label for="adults">Nombre d'adultes :</label>
+        <input type="number" id="adults" placeholder="Nombre d'adultes">
+
+        <label for="children">Nombre d'enfants :</label>
+        <input type="number" id="children" placeholder="Nombre d'enfants">
+
+        <button onclick="addGroup()">Ajouter Groupe</button>
+
+        <h2>Gradins :</h2>
+        <div id="stadium">
+            <div id="leftGroup" class="group"></div>
+            <div id="centerGroup" class="group"></div>
+            <div id="rightGroup" class="group"></div>
+        </div>
+
+        <div id="summary">
+            <p>Places restantes : <span id="remainingSeats">336</span></p>
+            <p>Groupes déjà placés :</p>
+            <ul id="groupList"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
